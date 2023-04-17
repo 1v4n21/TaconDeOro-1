@@ -9,7 +9,8 @@ package tacondeoro;
  * @author usutarde
  */
 public class Productos {
-private String nombre;
+    private String nombre;
+    private int idProducto;
 
     public String getNombre() {
         return nombre;
