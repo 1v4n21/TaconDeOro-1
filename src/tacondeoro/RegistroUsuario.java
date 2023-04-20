@@ -151,11 +151,14 @@ public class RegistroUsuario extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void mn_MenuPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mn_MenuPrincipalActionPerformed
-        // TODO add your handling code here:
+        this.dispose();
     }//GEN-LAST:event_mn_MenuPrincipalActionPerformed
 
     private void mn_volverInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mn_volverInicioActionPerformed
-        // TODO add your handling code here:
+        Ventana1SeleccionRol b = new Ventana1SeleccionRol();
+        InicioRegistro a = new InicioRegistro(b, rootPaneCheckingEnabled);
+        this.dispose();
+        a.setVisible(rootPaneCheckingEnabled);
     }//GEN-LAST:event_mn_volverInicioActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

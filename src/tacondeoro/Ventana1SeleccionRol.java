@@ -27,30 +27,26 @@ public class Ventana1SeleccionRol extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        btt_cliente = new javax.swing.JButton();
-        btt_administrador = new javax.swing.JButton();
-        btt_administrador1 = new javax.swing.JButton();
+        btt_inicioSesion = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        btt_registro = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btt_cliente.setText("Cliente");
-        btt_cliente.addActionListener(new java.awt.event.ActionListener() {
+        btt_inicioSesion.setText("INICIO DE SESION");
+        btt_inicioSesion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btt_clienteActionPerformed(evt);
+                btt_inicioSesionActionPerformed(evt);
             }
         });
 
-        btt_administrador.setText("Administrador ");
-        btt_administrador.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btt_administradorActionPerformed(evt);
-            }
-        });
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        jLabel1.setText("BIENVENIDO AL INICIO DE SESION DE TACON DE ORO");
 
-        btt_administrador1.setText("Empleado Almacen");
-        btt_administrador1.addActionListener(new java.awt.event.ActionListener() {
+        btt_registro.setText("REGISTRARSE");
+        btt_registro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btt_administrador1ActionPerformed(evt);
+                btt_registroActionPerformed(evt);
             }
         });
 
@@ -59,30 +55,36 @@ public class Ventana1SeleccionRol extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(btt_cliente, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
-                .addComponent(btt_administrador, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
-                .addComponent(btt_administrador1, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(btt_registro, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btt_inicioSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(130, 130, 130)
+                .addGap(37, 37, 37)
+                .addComponent(jLabel1)
+                .addGap(77, 77, 77)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btt_cliente)
-                    .addComponent(btt_administrador)
-                    .addComponent(btt_administrador1))
-                .addContainerGap(225, Short.MAX_VALUE))
+                    .addComponent(btt_inicioSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btt_registro, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(219, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -92,17 +94,15 @@ public class Ventana1SeleccionRol extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btt_clienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btt_clienteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btt_clienteActionPerformed
+    private void btt_inicioSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btt_inicioSesionActionPerformed
+        InicioRegistro a = new InicioRegistro(this, rootPaneCheckingEnabled);
+        a.setVisible(rootPaneCheckingEnabled);
+    }//GEN-LAST:event_btt_inicioSesionActionPerformed
 
-    private void btt_administradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btt_administradorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btt_administradorActionPerformed
-
-    private void btt_administrador1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btt_administrador1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btt_administrador1ActionPerformed
+    private void btt_registroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btt_registroActionPerformed
+        RegistroUsuario a = new RegistroUsuario(this, rootPaneCheckingEnabled);
+        a.setVisible(rootPaneCheckingEnabled);
+    }//GEN-LAST:event_btt_registroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -140,9 +140,9 @@ public class Ventana1SeleccionRol extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btt_administrador;
-    private javax.swing.JButton btt_administrador1;
-    private javax.swing.JButton btt_cliente;
+    private javax.swing.JButton btt_inicioSesion;
+    private javax.swing.JButton btt_registro;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

@@ -9,12 +9,13 @@ package tacondeoro;
  * @author usutarde
  */
 public class InicioRegistro extends javax.swing.JDialog {
-
+private Ventana1SeleccionRol padre;
     /**
      * Creates new form InicioRegistro
      */
     public InicioRegistro(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
+        padre=(Ventana1SeleccionRol) parent;
         initComponents();
     }
 
@@ -27,32 +28,41 @@ public class InicioRegistro extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
+        jRadioButton1 = new javax.swing.JRadioButton();
         btt_iniciarSesion = new javax.swing.JButton();
         btt_AbrirVentanaRegistro = new javax.swing.JButton();
         tf_nombreUsuario = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         tf_contraseña = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        btt_volverVentanaPrincipal = new javax.swing.JButton();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
         jLabel3 = new javax.swing.JLabel();
         tf_contraseña1 = new javax.swing.JTextField();
+        cb_adminMozo = new javax.swing.JCheckBox();
+        jLabel4 = new javax.swing.JLabel();
+        btt_volverAtras = new javax.swing.JToggleButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setBackground(new java.awt.Color(2, 2, 2));
+        jRadioButton1.setText("jRadioButton1");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(29, Short.MAX_VALUE)
+                .addComponent(jRadioButton1)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 105, Short.MAX_VALUE)
+                .addComponent(jRadioButton1))
         );
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setBackground(new java.awt.Color(2, 2, 2));
 
         btt_iniciarSesion.setBackground(new java.awt.Color(129, 129, 129));
         btt_iniciarSesion.setForeground(new java.awt.Color(255, 195, 0));
@@ -84,7 +94,6 @@ public class InicioRegistro extends javax.swing.JDialog {
         jLabel1.setForeground(new java.awt.Color(255, 195, 0));
         jLabel1.setText("Correo Electronico");
 
-        tf_contraseña.setEditable(false);
         tf_contraseña.setBackground(new java.awt.Color(203, 203, 203));
         tf_contraseña.setForeground(new java.awt.Color(203, 203, 203));
         tf_contraseña.addActionListener(new java.awt.event.ActionListener() {
@@ -96,27 +105,6 @@ public class InicioRegistro extends javax.swing.JDialog {
         jLabel2.setBackground(new java.awt.Color(2, 2, 2));
         jLabel2.setForeground(new java.awt.Color(255, 195, 0));
         jLabel2.setText("Contraseña");
-
-        btt_volverVentanaPrincipal.setText("Volver atras");
-        btt_volverVentanaPrincipal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btt_volverVentanaPrincipalActionPerformed(evt);
-            }
-        });
-
-        jCheckBox1.setText("Administrador");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
-            }
-        });
-
-        jCheckBox3.setText("Mozo de Almacen");
-        jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox3ActionPerformed(evt);
-            }
-        });
 
         jLabel3.setBackground(new java.awt.Color(2, 2, 2));
         jLabel3.setForeground(new java.awt.Color(255, 195, 0));
@@ -131,21 +119,30 @@ public class InicioRegistro extends javax.swing.JDialog {
             }
         });
 
+        cb_adminMozo.setText("Admin/Mozo");
+        cb_adminMozo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cb_adminMozoMouseClicked(evt);
+            }
+        });
+
+        jLabel4.setText("¿Aún no te has registrado?");
+
+        btt_volverAtras.setText("Volver atrás");
+        btt_volverAtras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btt_volverAtrasActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btt_volverVentanaPrincipal)
-                .addContainerGap())
             .addGroup(layout.createSequentialGroup()
-                .addGap(99, 99, 99)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCheckBox1)
-                    .addComponent(jCheckBox3))
-                .addGap(74, 74, 74)
+                .addGap(160, 160, 160)
+                .addComponent(cb_adminMozo)
+                .addGap(80, 80, 80)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -155,46 +152,44 @@ public class InicioRegistro extends javax.swing.JDialog {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(tf_contraseña1, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(tf_nombreUsuario, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(tf_contraseña, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btt_AbrirVentanaRegistro, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(btt_iniciarSesion, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE))
-                                .addComponent(jLabel3)))
-                        .addContainerGap(166, Short.MAX_VALUE))))
+                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tf_nombreUsuario, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tf_contraseña, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btt_iniciarSesion, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
+                            .addComponent(btt_volverAtras, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap(124, Short.MAX_VALUE))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel4)
+                .addGap(18, 18, 18)
+                .addComponent(btt_AbrirVentanaRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(tf_nombreUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel2)))
+                .addGap(21, 21, 21)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(tf_nombreUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2)
                 .addGap(12, 12, 12)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(tf_contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(tf_contraseña1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(23, 23, 23)
-                        .addComponent(btt_iniciarSesion)
-                        .addGap(18, 18, 18))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jCheckBox1)
-                        .addGap(18, 18, 18)
-                        .addComponent(jCheckBox3)
-                        .addGap(66, 66, 66)))
-                .addComponent(btt_AbrirVentanaRegistro)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
-                .addComponent(btt_volverVentanaPrincipal)
+                .addComponent(tf_contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf_contraseña1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cb_adminMozo))
+                .addGap(25, 25, 25)
+                .addComponent(btt_iniciarSesion)
+                .addGap(18, 18, 18)
+                .addComponent(btt_volverAtras)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btt_AbrirVentanaRegistro)
+                    .addComponent(jLabel4))
                 .addContainerGap())
         );
 
@@ -214,24 +209,27 @@ public class InicioRegistro extends javax.swing.JDialog {
     }//GEN-LAST:event_tf_contraseñaActionPerformed
 
     private void btt_AbrirVentanaRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btt_AbrirVentanaRegistroActionPerformed
-        // TODO add your handling code here:
+        Ventana1SeleccionRol b = new Ventana1SeleccionRol();
+        RegistroUsuario a = new RegistroUsuario(b, rootPaneCheckingEnabled);
+        this.dispose();
+        a.setVisible(true);
     }//GEN-LAST:event_btt_AbrirVentanaRegistroActionPerformed
-
-    private void btt_volverVentanaPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btt_volverVentanaPrincipalActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btt_volverVentanaPrincipalActionPerformed
-
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
-
-    private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox3ActionPerformed
 
     private void tf_contraseña1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_contraseña1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tf_contraseña1ActionPerformed
+
+    private void cb_adminMozoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cb_adminMozoMouseClicked
+        if(cb_adminMozo.isSelected()){
+            tf_contraseña1.setEditable(true);
+        }else{
+            tf_contraseña1.setEditable(false);
+        }
+    }//GEN-LAST:event_cb_adminMozoMouseClicked
+
+    private void btt_volverAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btt_volverAtrasActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btt_volverAtrasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -278,13 +276,15 @@ public class InicioRegistro extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btt_AbrirVentanaRegistro;
     private javax.swing.JButton btt_iniciarSesion;
-    private javax.swing.JButton btt_volverVentanaPrincipal;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox3;
+    private javax.swing.JToggleButton btt_volverAtras;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JCheckBox cb_adminMozo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JTextField tf_contraseña;
     private javax.swing.JTextField tf_contraseña1;
     private javax.swing.JTextField tf_nombreUsuario;
