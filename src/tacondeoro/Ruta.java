@@ -8,19 +8,41 @@ import java.util.ArrayList;
 
 /**
  *
- * @author cpere
+ * @author felis
  */
 public class Ruta {
-    private ArrayList<String> areaInfluencia = null;
-    private ArrayList<String> diasReparto = null;
+    private int idRuta;
+    private ArrayList<String> areaInfluencia;
+    private ArrayList<String> diasReparto;
+    private ArrayList<Pedido> pedidosDeRuta;
+    
 
     public Ruta() {
     }
 
+    public Ruta(ArrayList<String> areaInfluencia, ArrayList<String> diasReparto, ArrayList<Pedido> pedidosDeRuta) {
+        this.areaInfluencia = areaInfluencia;
+        this.diasReparto = diasReparto;
+        this.pedidosDeRuta = pedidosDeRuta;
+    }
+
+    public Ruta(int idRuta, ArrayList<String> areaInfluencia, ArrayList<String> diasReparto, ArrayList<Pedido> pedidosDeRuta) {
+        this.idRuta = idRuta;
+        this.areaInfluencia = areaInfluencia;
+        this.diasReparto = diasReparto;
+        this.pedidosDeRuta = pedidosDeRuta;
+    }
+
+    
+    
     public ArrayList<String> getAreaInfluencia() {
         return areaInfluencia;
     }
 
+    public int getIdRuta() {
+        return idRuta;
+    }
+    
     public void setAreaInfluencia(ArrayList<String> areaInfluencia) {
         this.areaInfluencia = areaInfluencia;
     }
@@ -37,6 +59,4 @@ public class Ruta {
     public String toString() {
         return "Ruta{" + "areaInfluencia=" + areaInfluencia + ", diasReparto=" + diasReparto + '}';
     }
-
-    
 }
